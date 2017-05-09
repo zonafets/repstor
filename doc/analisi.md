@@ -47,6 +47,7 @@ Nello stadio finale dell'evoluzione, i metadati associati ai documenti, potranno
 
 <a name="sintassi"></a>
 ## Sintassi del comando
+:::bash
 
         -h,--help  mostra l'elenco seguente
         --settings  stampa il testo completo per la configurazione
