@@ -32,7 +32,7 @@ In questo caso vengono impiegate le specifiche di default espresse nel file di c
 Questa forma, abbinata eventualmente al parametro -p, si presta alla facile implementazione di una voce di menu contestuale del file manager o di un plugin da abbinare al proprio sito web (si pensi ad esempio ad owncloud).
 
 Uso in modalità terminale:
-
+```text
         >repstor
         doctype "Doc Generico"
         field documentid "pdftest"
@@ -42,14 +42,16 @@ Uso in modalità terminale:
         files ".*txt|.*pdf"         # regexp
         send
         quit
-
+```
 Nello stadio finale dell'evoluzione, i metadati associati ai documenti, potranno essere estrapolati da un file adiacente con estensione **.repstor** o xml o incluso nel file stesso, in caso di zip o appresi dal suo interno impiegando tools di estrazione.
 
 <a name="sintassi"></a>
 ## Sintassi del comando
-```
--h,--help  mostra l'elenco seguente
---settings  stampa il testo completo per la configurazione
+```text
+-h,--help
+    mostra l'elenco seguente
+--settings  
+    stampa il testo completo per la configurazione
 -i,--install
     configura o riconfigura il servizio o l'attività dello schedulatore in base alla configurazione
 -d,--doctype "tipo documento"
