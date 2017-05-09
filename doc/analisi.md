@@ -11,7 +11,7 @@ Sommario
 --------
 * L'utility
 * Esempio d'uso
-* Sintassi del comando
+* [Sintassi del comando](#sintassi)
 * Configurazione
 * Informazioni tecniche
 * Fasi e tempi di sviluppo
@@ -49,6 +49,7 @@ Uso in modalità terminale:
 
 Nello stadio finale dell'evoluzione, i metadati associati ai documenti, potranno essere estrapolati da un file adiacente con estensione **.repstor** o xml o incluso nel file stesso, in caso di zip o appresi dal suo interno impiegando tools di estrazione.
 
+<a name="sintassi"></a>
 Sintassi del comando
 --------------------
         >repstor --help
@@ -139,22 +140,22 @@ Fasi e tempi di sviluppo
 ------------------------
 Le fasi(Fs) di sviluppo sono suddivise per blocchi di lavoro di circa un mese ciascuno. Tranne per le fasi cruciali, le opzionali possono essere eseguite in ordine differente, in parallelo e da team differenti. Alcune fasi opzionali possono anche durare meno, in relazione alla conoscenza diretta dello sviluppatore dell'ambiente di riferimento.
 
-|Fs |Attività                                               |Importanza|Stato|
-|---|-------------------------------------------------------|----------|:---:|
-|0  |analisi                                                |principale|90%  |
-|1  |libreria e comandi file,files,doctype,doctypes,field   |basilare  |0%   |
-|   |send, status, update, help, settings                   |          |     |
-|2  |comandi install,summary,start_date,end_date,days,      |basilare  |0%   |
-|   |waiting,stored,failing,csv,json                        |          |     |
-|3  |modalità terminale, comando group,                     |opzionale |0%   |
-|   |modalità webservice (integrata)                        |          |0%   |
-|4  |script o plugin per gnome,mate,owncloud etc.           |opzionale |0%   |
-|5  |interfaccia minimale web bootstrap+knockout,           |opzionale |0%   |
-|   |con dashboard,filtro per comandi summary e status      |          |     |
-|6  |tests per funzionalità base, su vari sistemi           |opzionale |0%   |
-|   |e providers                                            |          |     |
-|7  |estensione ad più providers                            |opzionale |0%   |
-|8  |supporto man e pacchettizzazione (deb,pip,nuget,altro) |opzionale |0%   | 
+|Fs |Attività                                               |Importanza|
+|---|-------------------------------------------------------|----------|
+|0  |analisi                                                |principale|
+|1  |libreria e comandi file,files,doctype,doctypes,field   |basilare  |
+|   |send, status, update, help, settings                   |          |
+|2  |comandi install,summary,start_date,end_date,days,      |basilare  |
+|   |waiting,stored,failing,csv,json                        |          |
+|3  |modalità terminale, comando group,                     |opzionale |
+|   |modalità webservice (integrata)                        |          |
+|4  |script o plugin per gnome,mate,owncloud etc.           |opzionale |
+|5  |interfaccia minimale web bootstrap+knockout,           |opzionale |
+|   |con dashboard,filtro per comandi summary e status      |          |
+|6  |tests per funzionalità base, su vari sistemi           |opzionale |
+|   |e providers                                            |          |
+|7  |estensione ad più providers                            |opzionale |
+|8  |supporto man e pacchettizzazione (deb,pip,nuget,altro) |opzionale |
 
 Providers supportati
 --------------------
