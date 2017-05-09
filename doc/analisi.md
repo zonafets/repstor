@@ -22,11 +22,11 @@ In stile Unix, l'utility, nella sua forma finale, si presterà per essere impieg
 <a name="esempio"></a>
 ## Esempio d'uso
 Uso semplice:
-
+```text
         >repstor filename
         Archiviazioner assegnata al job 1674837
         Usare il comando status per monitorare l'avanzamento.
-
+```
 In questo caso vengono impiegate le specifiche di default espresse nel file di configurazione **/etc/repstor.conf**.
 
 Questa forma, abbinata eventualmente al parametro -p, si presta alla facile implementazione di una voce di menu contestuale del file manager o di un plugin da abbinare al proprio sito web (si pensi ad esempio ad owncloud).
@@ -92,16 +92,16 @@ Anche file,files e field concorrono come filtri
 Esempio formato di output del comando status:
 
 
-|Provider|Sistema|#|Titolo|ID Job|Stato Job|ID Doc.|Stato Doc.      |Errore |Aggiornato|Inviato|
-|--------|-------|-|------|------|---------|-------|----------------|-------|------------|-------|
-|SIA     |eDK    |1|pdftst|      |         |       |                |Srv.N/D|11.11.16 00:13:20|
+|Provider|Sistema|#|Titolo|ID Job|Stato Job|ID Doc.|Stato Doc.      |Errore |Aggiornato       |Inviato          |
+|--------|-------|-|------|------|---------|-------|----------------|-------|-----------------|-----------------|
+|SIA     |eDK    |1|pdftst|      |         |       |                |Srv.N/D|11.11.16 00:13:20|                 |
 |SIA     |eDK    |1|pdftst|123221|completo |0000001|In conservazione|       |11.11.16 11:32:39|11.11.16 11:32:39|
 
 
 <a name="configurazione"></a>
 ## Configurazione
 Prototipo d'esempio del contenuto del file /etc/repstor.conf:
-
+```INI
     [service]
     update_times =              # formato cron
     
@@ -126,8 +126,7 @@ Prototipo d'esempio del contenuto del file /etc/repstor.conf:
     notify_user =
     notify_password =
     notify_protection_type =
-    
-    
+```
 <a name="informazioni_tecniche"></a>
 ## Informazioni tecniche
 Il codice sorgente sarà prodotto in C# o Python. Si cercherà di mantenere linearità tra i parametri del comando, i comandi da terminale e le web api.
@@ -136,29 +135,24 @@ Il codice sorgente sarà prodotto in C# o Python. Si cercherà di mantenere line
 ## Fasi e tempi di sviluppo
 Le fasi(Fs) di sviluppo sono suddivise per blocchi di lavoro di circa un mese ciascuno. Tranne per le fasi cruciali, le opzionali possono essere eseguite in ordine differente, in parallelo e da team differenti. Alcune fasi opzionali possono anche durare meno, in relazione alla conoscenza diretta dello sviluppatore dell'ambiente di riferimento.
 
-|Fs |Attività                                               |Importanza|
-|---|-------------------------------------------------------|----------|
-|0  |analisi                                                |principale|
-|1  |libreria e comandi file,files,doctype,doctypes,field   |basilare  |
-|   |send, status, update, help, settings                   |          |
-|2  |comandi install,summary,start_date,end_date,days,      |basilare  |
-|   |waiting,stored,failing,csv,json                        |          |
-|3  |modalità terminale, comando group,                     |opzionale |
-|   |modalità webservice (integrata)                        |          |
-|4  |script o plugin per gnome,mate,owncloud etc.           |opzionale |
-|5  |interfaccia minimale web bootstrap+knockout,           |opzionale |
-|   |con dashboard,filtro per comandi summary e status      |          |
-|6  |tests per funzionalità base, su vari sistemi           |opzionale |
-|   |e providers                                            |          |
-|7  |estensione ad più providers                            |opzionale |
-|8  |supporto man e pacchettizzazione (deb,pip,nuget,altro) |opzionale |
+|Fs |Attività                                                                                      |Importanza|
+|---|----------------------------------------------------------------------------------------------|----------|
+|   |analisi                                                                                       |principale|
+|1  |libreria e comandi file, files, doctype, doctypes, field, send, status, update, help, settings|basilare  |
+|2  |comandi install, summary, start_date, end_date, days, waiting, stored, failing, csv, json     |basilare  |
+|3  |modalità terminale, comando group,modalità webservice (integrata)                             |opzionale |
+|4  |script o plugin per gnome,mate,owncloud etc.                                                  |opzionale |
+|5  |interfaccia minimale web bootstrap+knockout,con dashboard,filtro per comandi summary e status |opzionale |
+|6  |tests per funzionalità base, su vari sistemi e providers                                      |opzionale |
+|7  |estensione ad più providers                                                                   |opzionale |
+|8  |supporto man e pacchettizzazione (deb,pip,nuget,altro)                                        |opzionale |
 
 <a name="providers"></a>
 ## Providers supportati
 * Gruppo SIA(accreditato Agid)
     * sistema [eDK]: archiviazione sostitutiva
     * sistema eIS: fatturazione elettronica
-    
+
 <a name="tests"></a>
 ## Tests
 I tests riguardano sia il controllo delle funzionalità per singolo provider, sia il buon funzionamento nel sistema operativo d'uso.
