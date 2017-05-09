@@ -48,43 +48,43 @@ Nello stadio finale dell'evoluzione, i metadati associati ai documenti, potranno
 <a name="sintassi"></a>
 ## Sintassi del comando
 ```
-        -h,--help  mostra l'elenco seguente
-        --settings  stampa il testo completo per la configurazione
-        -i,--install
-            configura o riconfigura il servizio o l'attività dello schedulatore in base alla configurazione
-        -d,--doctype "tipo documento"
-        -m,--field metadato valore|macro
-        -f,--file "nome file"
-        -F,--files "espressione regolare"
-        -s,--send
-        -g,--group
-            l'archiviazione può avvenire per singolo file (1 file -> 1 job)
-            oppure può essere comulativa (più files -> 1 zip -> 1 job);
-            nel caso di accumulo, il provider può avere dei limiti di 
-            dimensione
-        -p,--provider nome_del_provider|nome_del_profilo
-        --doctypes
-            elenca i tipi di documento (possibilmente filtrati per tipo supportati dal contratto con il provider)
-        --fields "tipo documento"
-            elenca i metadati associabili al tipo di documento
-        -S,--summary
-            mostra una tabella numerica riassuntiva dei documenti inviati, da conservare, in conservazione e falliti
-        -u,--update
-            aggiorna l'archivio locale dello stato dei documenti
-        --status
-            elenca lo stato dei documenti da archivio locale o da provider se possibile
-        
-        filters:
-        questo gruppo di comandi influenza il risultato dei comandi summary e status
-        --start_date    data di inizio intervallo
-        --end_date      data di fine intervallo
-        --days numero   numero di giorni precedenti alla data corrente
-        --waiting       intervallo di archivi pendenti o in fase di archiviazione
-        --stored        intervallo di archivi in conservazione
-        --failing       intervallo di archivi in errore
-        --csv           mostra elenco in formato csv
-        --json          mostra elenco in formato json
-        Anche file,files e field concorrono come filtri
+-h,--help  mostra l'elenco seguente
+--settings  stampa il testo completo per la configurazione
+-i,--install
+    configura o riconfigura il servizio o l'attività dello schedulatore in base alla configurazione
+-d,--doctype "tipo documento"
+-m,--field metadato valore|macro
+-f,--file "nome file"
+-F,--files "espressione regolare"
+-s,--send
+-g,--group
+    l'archiviazione può avvenire per singolo file (1 file -> 1 job)
+    oppure può essere comulativa (più files -> 1 zip -> 1 job);
+    nel caso di accumulo, il provider può avere dei limiti di 
+    dimensione
+-p,--provider nome_del_provider|nome_del_profilo
+--doctypes
+    elenca i tipi di documento (possibilmente filtrati per tipo supportati dal contratto con il provider)
+--fields "tipo documento"
+    elenca i metadati associabili al tipo di documento
+-S,--summary
+    mostra una tabella numerica riassuntiva dei documenti inviati, da conservare, in conservazione e falliti
+-u,--update
+    aggiorna l'archivio locale dello stato dei documenti
+--status
+    elenca lo stato dei documenti da archivio locale o da provider se possibile
+
+filters:
+questo gruppo di comandi influenza il risultato dei comandi summary e status
+--start_date    data di inizio intervallo
+--end_date      data di fine intervallo
+--days numero   numero di giorni precedenti alla data corrente
+--waiting       intervallo di archivi pendenti o in fase di archiviazione
+--stored        intervallo di archivi in conservazione
+--failing       intervallo di archivi in errore
+--csv           mostra elenco in formato csv
+--json          mostra elenco in formato json
+Anche file,files e field concorrono come filtri
 ```
 
 Esempio formato di output del comando status:
