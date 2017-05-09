@@ -47,8 +47,7 @@ Nello stadio finale dell'evoluzione, i metadati associati ai documenti, potranno
 
 <a name="sintassi"></a>
 ## Sintassi del comando
-:::bash
-
+```
         -h,--help  mostra l'elenco seguente
         --settings  stampa il testo completo per la configurazione
         -i,--install
@@ -86,7 +85,8 @@ Nello stadio finale dell'evoluzione, i metadati associati ai documenti, potranno
         --csv           mostra elenco in formato csv
         --json          mostra elenco in formato json
         Anche file,files e field concorrono come filtri
-    
+```
+
 Esempio formato di output del comando status:
 
 
