@@ -2,13 +2,13 @@
 utilità per archiviazione sostitutiva e fatturazione elettronica
 
 ## Sommario
-* [Analisi] [pdf](https://gitprint.com/zonafets/repstor/blob/master/doc/analisi.md)
+* [Analisi] ([pdf](https://gitprint.com/zonafets/repstor/blob/master/doc/analisi.md))
 * Autori
 * Sponsor
 
 ## Autori
 
-* **Stefano Zaglio** - *Analisi Iniziale* 
+* **Stefano Zaglio** - *Analisi Iniziale*
 
 Vedere anche la lista dei [contributori](doc/progetto.md) che hanno partecipato al progetto.
 
