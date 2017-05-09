@@ -17,7 +17,6 @@ Sommario
 * Fasi e tempi di sviluppo
 * Providers supportati
 * Tests
-* Sponsor
 
 L'utility
 ---------
@@ -171,9 +170,6 @@ Attualmente sono supportati i seguenti sistemi operativi:
 
     * Ubuntu (probabilmente funzionante anche su Debian e derivate)
 
-Sponsor
--------
-* Italian Linux Society [ILS]
 
 ----------------------------------------------------------------------------------
 [eDK]: https://www.sia.eu/it/soluzioni/gestione-documentale/conservazione-digitale/conservazione-digitale

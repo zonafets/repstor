@@ -3,9 +3,9 @@ utilità per archiviazione sostitutiva e fatturazione elettronica
 
 ## Sommario
 * [Analisi]
-* [Autori](#Autori)
+* Autori
+* Sponsor
 
-<a name="Autori"></a>
 ## Autori
 
 * **Stefano Zaglio** - *Analisi Iniziale* 
@@ -13,8 +13,10 @@ utilità per archiviazione sostitutiva e fatturazione elettronica
 Vedere anche la lista dei [contributori](doc/progetto.md) che hanno partecipato al progetto.
 
 ## Licenza
+Questo progetto è concesso in licenza secondo il modello GPL3 - vedere il file [LICENSE](LICENSE) per dettagli.
 
-Questo progetto è concesso in licenza secondo il modello GPL3 - vedere il file [LICENSE.md](LICENSE.md) per dettagli.
+## Sponsor
+* Italian Linux Society [ILS]
 
 -------------------------------------------
 [Analisi]: https://github.com/zonafets/repstor/blob/master/doc/analisi.md
