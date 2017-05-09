@@ -2,7 +2,7 @@
 utilità per archiviazione sostitutiva e fatturazione elettronica
 
 ## Sommario
-* [Analisi]
+* [Analisi] [pdf](https://gitprint.com/zonafets/repstor/blob/master/doc/analisi.md)
 * Autori
 * Sponsor
 

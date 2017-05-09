@@ -5,9 +5,6 @@ In base ad una richiesta emersa in seno ad una riunione dell'Italian Linux Socie
 
 L'analisi cercherà di coprire tutto il processo vitale di un'applicazione che riguardano anche installazione e test.
 
-[TOC]
-
-
 ## Sommario
 * [L'utility](#utility)
 * [Esempio d'uso](#esempio)
