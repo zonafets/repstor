@@ -1,29 +1,29 @@
-REPSTOR
-=======
+# REPSTOR
 
-Premessa
---------
+## Premessa
 In base ad una richiesta emersa in seno ad una riunione dell'Italian Linux Society, è stato richiesto di sviluppare l'analisi per lo sviluppo di uno strumento in open source per l'archiviazione sostitutiva.
 
 L'analisi cercherà di coprire tutto il processo vitale di un'applicazione che riguardano anche installazione e test.
 
-Sommario
---------
-* L'utility
-* Esempio d'uso
-* [Sintassi del comando](#sintassi)
-* Configurazione
-* Informazioni tecniche
-* Fasi e tempi di sviluppo
-* Providers supportati
-* Tests
+[TOC]
 
-L'utility
----------
+
+## Sommario
+* [L'utility](#utility)
+* [Esempio d'uso](#esempio)
+* [Sintassi del comando](#sintassi)
+* [Configurazione](#configurazione)
+* [Informazioni tecniche](#informazioni_tecniche)
+* [Fasi e tempi di sviluppo](#fasi)
+* [Providers supportati](#providers)
+* [Tests](#tests)
+
+<a name="utility"></a>
+## L'utility
 In stile Unix, l'utility, nella sua forma finale, si presterà per essere impiegabile come comando bash, demone per client web o GUI locale.
 
-Esempio d'uso
--------------
+<a name="esempio"></a>
+## Esempio d'uso
 Uso semplice:
 
         >repstor filename
@@ -49,8 +49,7 @@ Uso in modalità terminale:
 Nello stadio finale dell'evoluzione, i metadati associati ai documenti, potranno essere estrapolati da un file adiacente con estensione **.repstor** o xml o incluso nel file stesso, in caso di zip o appresi dal suo interno impiegando tools di estrazione.
 
 <a name="sintassi"></a>
-Sintassi del comando
---------------------
+## Sintassi del comando
         >repstor --help
         commands:
             -h,--help  mostra l'elenco seguente
@@ -100,8 +99,8 @@ Esempio formato di output del comando status:
 |SIA     |eDK    |1|pdftst|123221|completo |0000001|In conservazione|       |11.11.16 11:32:39|11.11.16 11:32:39|
 
 
-Configurazione
---------------
+<a name="configurazione"></a>
+## Configurazione
 Prototipo d'esempio del contenuto del file /etc/repstor.conf:
 
     [service]
@@ -130,13 +129,12 @@ Prototipo d'esempio del contenuto del file /etc/repstor.conf:
     notify_protection_type =
     
     
-    
-Informazioni tecniche
----------------------
+<a name="informazioni_tecniche"></a>
+## Informazioni tecniche
 Il codice sorgente sarà prodotto in C# o Python. Si cercherà di mantenere linearità tra i parametri del comando, i comandi da terminale e le web api.
 
-Fasi e tempi di sviluppo
-------------------------
+<a name="fasi"></a>
+## Fasi e tempi di sviluppo
 Le fasi(Fs) di sviluppo sono suddivise per blocchi di lavoro di circa un mese ciascuno. Tranne per le fasi cruciali, le opzionali possono essere eseguite in ordine differente, in parallelo e da team differenti. Alcune fasi opzionali possono anche durare meno, in relazione alla conoscenza diretta dello sviluppatore dell'ambiente di riferimento.
 
 |Fs |Attività                                               |Importanza|
@@ -156,14 +154,14 @@ Le fasi(Fs) di sviluppo sono suddivise per blocchi di lavoro di circa un mese ci
 |7  |estensione ad più providers                            |opzionale |
 |8  |supporto man e pacchettizzazione (deb,pip,nuget,altro) |opzionale |
 
-Providers supportati
---------------------
+<a name="providers"></a>
+## Providers supportati
 * Gruppo SIA(accreditato Agid)
     * sistema [eDK]: archiviazione sostitutiva
     * sistema eIS: fatturazione elettronica
     
-Tests
------
+<a name="tests"></a>
+## Tests
 I tests riguardano sia il controllo delle funzionalità per singolo provider, sia il buon funzionamento nel sistema operativo d'uso.
 
 Attualmente sono supportati i seguenti sistemi operativi:
