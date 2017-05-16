@@ -8,7 +8,7 @@ In base ad una richiesta emersa in seno ad una riunione dell'Italian Linux Socie
 * [Esempio d'uso](#esempio)
 * [Sintassi del comando](#sintassi)
 * [Configurazione](#configurazione)
-* [Macro] (#macro)
+* [Variabili d'ambiente](#macro)
 * [Informazioni tecniche](#informazioni_tecniche)
 * [Fasi e tempi di sviluppo](#fasi)
 * [Providers supportati](#providers)
@@ -145,7 +145,7 @@ Prototipo d'esempio del contenuto del file /etc/repstor.conf:
     doctype_01_code = "001"
     doctype_01_description = "Doc generico" 
     # assegnazione tipo di documento in base al nome dell'archivio
-    doctype_01_match= ".*"      # regexp
+    doctype_01_match= ".*"      # regexp sul nome dell'archivio
     doctype_01_parser=
     field_01_01_name =
     field_01_01_value =
@@ -161,7 +161,10 @@ Prototipo d'esempio del contenuto del file /etc/repstor.conf:
     
 ```
 <a name="macro"></a>
-## Macro    
+## Variabili d'ambiente
+Le variabili d'ambiente, identificate dal simbolo @, sono impostate dal programma,
+acquisendo i valori dalla configurazione o dai parser esterni.
+
 * **@filename**             nome archivio
 * **@doctype**              tipo documento
 * **@doctype_code**         codice tipo documento
