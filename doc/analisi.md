@@ -1,4 +1,4 @@
-# REPSTOR
+﻿# REPSTOR
 
 ## Premessa
 In base ad una richiesta emersa in seno ad una riunione dell'Italian Linux Society, è stato richiesto di sviluppare l'analisi per lo sviluppo di uno strumento in open source per l'archiviazione sostitutiva.
@@ -23,7 +23,7 @@ In stile Unix, l'utility, nella sua forma finale, si presterà per essere impieg
 Uso semplice:
 ```text
         >repstor filename
-        Archiviazioner assegnata al job 1674837
+        Archiviazione assegnata al job 1674837
         Usare il comando status per monitorare l'avanzamento.
 ```
 In questo caso vengono impiegate le specifiche di default espresse nel file di configurazione **/etc/repstor.conf**.
@@ -61,7 +61,7 @@ Nello stadio finale dell'evoluzione, i metadati associati ai documenti, potranno
 -s,--send
 -g,--group
     l'archiviazione può avvenire per singolo file (1 file -> 1 job)
-    oppure può essere comulativa (più files -> 1 zip -> 1 job);
+    oppure può essere cumulativa (più files -> 1 zip -> 1 job);
     nel caso di accumulo, il provider può avere dei limiti di 
     dimensione
 -p,--provider nome_del_provider|nome_del_profilo
