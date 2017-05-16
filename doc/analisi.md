@@ -3,13 +3,12 @@
 ## Premessa
 In base ad una richiesta emersa in seno ad una riunione dell'Italian Linux Society, è stato richiesto di sviluppare l'analisi per lo sviluppo di uno strumento in open source per l'archiviazione sostitutiva.
 
-L'analisi cercherà di coprire tutto il processo vitale di un'applicazione che riguardano anche installazione e test.
-
 ## Sommario
 * [L'utility](#utility)
 * [Esempio d'uso](#esempio)
 * [Sintassi del comando](#sintassi)
 * [Configurazione](#configurazione)
+* [Macro] (#macro)
 * [Informazioni tecniche](#informazioni_tecniche)
 * [Fasi e tempi di sviluppo](#fasi)
 * [Providers supportati](#providers)
@@ -34,12 +33,13 @@ Questa forma, abbinata eventualmente al parametro -p, si presta alla facile impl
 Uso in modalità terminale:
 ```text
         >repstor
+        provider acme               # sceglie destinazione
         doctype "Doc Generico"
         field documentid "pdftest"
         file filename
         group                       # raggruppa in singolo documento
-        field documentid $filename  # macro
-        files ".*txt|.*pdf"         # regexp
+        field documentid @filename  # macro
+        files ".*txt|.*pdf"         # match tramite regexp
         send
         quit
 ```
@@ -74,7 +74,7 @@ Nello stadio finale dell'evoluzione, i metadati associati ai documenti, potranno
 -u,--update
     aggiorna l'archivio locale dello stato dei documenti
 --status
-    elenca lo stato dei documenti da archivio locale o da provider se possibile
+    elenca lo stato delle spedizioni da archivio locale o da provider se possibile, eventualmente filtrato
 
 filters:
 questo gruppo di comandi influenza il risultato dei comandi summary e status
@@ -84,6 +84,8 @@ questo gruppo di comandi influenza il risultato dei comandi summary e status
 --waiting       intervallo di archivi pendenti o in fase di archiviazione
 --stored        intervallo di archivi in conservazione
 --failing       intervallo di archivi in errore
+--jobid         filtra una specifica spedizione e modifica l'output di --status
+--docid         filtra uno specifico documento e modifica l'output di --status
 --csv           mostra elenco in formato csv
 --json          mostra elenco in formato json
 Anche file,files e field concorrono come filtri
@@ -92,10 +94,16 @@ Anche file,files e field concorrono come filtri
 Esempio formato di output del comando status:
 
 
-|Provider|Sistema|#|Titolo|ID Job|Stato Job|ID Doc.|Stato Doc.      |Errore |Aggiornato       |Inviato          |
-|--------|-------|-|------|------|---------|-------|----------------|-------|-----------------|-----------------|
-|SIA     |eDK    |1|pdftst|      |         |       |                |Srv.N/D|11.11.16 00:13:20|                 |
-|SIA     |eDK    |1|pdftst|123221|completo |0000001|In conservazione|       |11.11.16 11:32:39|11.11.16 11:32:39|
+|Provider|Sistema|#|Titolo|ID Job|Stato Job|Errore |Aggiornato       |Inviato          |
+|--------|-------|-|------|------|---------|-------|-----------------|-----------------|
+|SIA     |eDK    |1|pdftst|      |         |Srv.N/D|11.11.16 00:13:20|                 |
+|SIA     |eDK    |1|pdftst|123221|completo |0000001|In conservazione |11.11.16 11:32:39|11.11.16 11:32:39|
+
+Esempio formato di output del comando status modificato da jobid e docid
+
+|Provider|Sistema|JobId |DocId|field01|field02|...|
+|--------|-------|------|-----|-------|-------|---|
+|SIA     |eDK    |123221|    1|       |       |   |
 
 
 <a name="configurazione"></a>
@@ -104,10 +112,12 @@ Prototipo d'esempio del contenuto del file /etc/repstor.conf:
 ```INI
     [service]
     update_times =              # formato cron
+    daemon =                    # abilita/disabilita il servizio di sistema
+    webservice =                # abilita/disabilita il servizio web
+    webinterface =              # abilita/disabilita l'interfaccia web
     
     [providers]
     acme = "Descrizione"
-    #default =                  # in caso di più provider 
     
     [acme]                      # specifiche provider
     storage_ws =                # url webservice archiviazione
@@ -126,7 +136,39 @@ Prototipo d'esempio del contenuto del file /etc/repstor.conf:
     notify_user =
     notify_password =
     notify_protection_type =
+        
+    #
+    # parametri configurazione documenti
+    # completano eventuale elenco fornito da provider
+    #
+
+    doctype_01_code = "001"
+    doctype_01_description = "Doc generico" 
+    # assegnazione tipo di documento in base al nome dell'archivio
+    doctype_01_match= ".*"      # regexp
+    doctype_01_parser=
+    field_01_01_name =
+    field_01_01_value =
+    # ...
+
+    # parametri avanzati per gestione temporanei, log, db
+
+    temp_path =
+    log_path =
+    db_origin = # user:password@server:ip/database
+    
+    #
+    
 ```
+<a name="macro"></a>
+## Macro    
+* **@filename**             nome archivio
+* **@doctype**              tipo documento
+* **@doctype_code**         codice tipo documento
+* **@field_01_name**        il relativo valore dai settings
+* **@field_01_value**       il relativo valore dai settings
+* **@field_value(name)**    valore campo specificato tra parentesi tonde, impostato nella configurazione o ottenuto dal parser esterno
+
 <a name="informazioni_tecniche"></a>
 ## Informazioni tecniche
 Il codice sorgente sarà prodotto in C# o Python. Si cercherà di mantenere linearità tra i parametri del comando, i comandi da terminale e le web api.
@@ -146,6 +188,7 @@ Le fasi(Fs) di sviluppo sono suddivise per blocchi di lavoro di circa un mese ci
 |6  |tests per funzionalità base, su vari sistemi e providers                                      |opzionale |
 |7  |estensione ad più providers                                                                   |opzionale |
 |8  |supporto man e pacchettizzazione (deb,pip,nuget,altro)                                        |opzionale |
+|9  |parametri configurazione avanzati e file .repstor                                              |opzionale |
 
 <a name="providers"></a>
 ## Providers supportati
