@@ -18,12 +18,15 @@ L'evoluzione informatica italiana, porta la scuola a doversi dotare di strumenti
   	* fatturazione
   	
 ### Perché software libero e aperto
-La primaria funzione di una scuola è l'apprendimento. Mentre ad oggi quasi nessun individuo si porta appresso taqquino e penna, sempre più giovani sono dotati di smartphone. L'informatica non è più una conoscenza riservata ai tecnici. Il software a codice aperto, quindi anche studiabile, non è preconfezionato ma allo stesso tempo non è dipendente da una specifica linea di profitto. Il software proprietario obbliga, oltre al costo di licenza, anche quello per l'installazione e manutenzione. Vi si aggiunge eventuale costo per personalizzazione oppure all'adeguamento. Oppure obbliga anche all'acquisto di funzionalità che non servono. Il software libero comporta necessariamente auto formazione. Con ciò l'attività viene equamente ripartita tra tecnico e utente, valorizzando il lavoro. Nel software proprietario il maggior valore è dato al prodotto o al brand. Poiché il valore è anche un costo, nel caso del OS ha un ritorno diretto.
+La primaria funzione di una scuola è l'apprendimento. Mentre ad oggi quasi nessun individuo si porta appresso taccuino e penna, sempre più giovani sono dotati di smartphone. L'informatica non è più una conoscenza riservata ai tecnici. Il software a codice aperto e quindi studiabile, non è preconfezionato ma allo stesso tempo non è fortemente dipendente da una specifica linea di condotta personale. Il software proprietario obbliga, oltre al costo di licenza, anche a quello per l'installazione e manutenzione. Vi si aggiunge eventuale costo per personalizzazione oppure all'adeguamento. Può obbligare all'acquisto di funzionalità non richieste. L’installatore diventa rivenditore. Il software libero comporta necessariamente auto formazione. Con ciò l'attività viene equamente ripartita tra tecnico e utente, valorizzandone il lavoro. Nel software proprietario il maggior valore è dato al prodotto  e diviene sempre più questione di brand. Poiché il valore è anche un costo, nel caso del OS ha un ritorno diretto.
 La crescita costante del software libero e la sua adozione da parte dei grandi produttori, anche del settore informatico, dimostra che quando la valorizzazione del prodotto supera la sua reale utilità, non c'è benefico.
 Le comunità di sviluppo rappresentano poi esempi di applicazione di organizzazioni democratiche e dei relativi vantaggi economici.
+Linux si pone, nel suo modo si essere, come un engine for state machine workflow. Non è facile, ma può essere personalizzato a piacere. Non è caso è divenuto cuore e cervello di molti dispositivi casalinghi come le smarttv.
+Il suo impiego nei pubblici uffici ha un potenziale ben superiore a quello del software proprietario. Ha solo bisogno di essere scoperto. 
+Il maggior ostacolo è dato dal fatto che la libertà non è un bene che si possa vendere con l’idea di trarre facile profitto.
 
 ### Pagina wiki(pedia) per la scuola
-Quando si cerca un software specifico, ad esempio per l'editig video, sono molto apprezzate le pagine schematiche che mettono a confronto i prodotti esistenti. Sarebbe utile, anche come ricerca per uno o più studenti, cooperando magari tra più scuole, creare una knowledge base simile per i software utili alla didattica.
+Quando si cerca un software specifico, ad esempio per l'editig video, sono apprezzabili le pagine schematiche che mettono a confronto i prodotti esistenti. Sarebbe utile, anche come ricerca per uno o più studenti, cooperando magari tra più scuole, creare una knowledge base simile per i software utili alla didattica.
 Si può partire dal seguente elenco:
 
 * https://github.com/Kickball/awesome-selfhosted
@@ -37,7 +40,7 @@ Questi specifici strumenti hanno un limite proprio nella loro specializzazione. 
 
 ### Perché Ubuntu Friendly
 Linux è free, non gratis.
-La natura "aperta" ottimizza i costi distribuendoli e riciclando il più possibile, ma non li azzera. Apple fa largo uso di prodotti OS. Ubuntu ha un certo successo nel mondo desktop perchè è "windows friendly" ma anche perchè i prodotti presenti nel software center sono certificati per la sicurezza e qualità.
+La natura "aperta" ottimizza i costi distribuendoli e riciclando il più possibile, ma non li azzera. Apple fa largo uso di prodotti OS, lo si legge nei credits dell'iPhone. Ubuntu ha un certo successo nel mondo desktop perchè è "windows friendly" ma anche perchè i prodotti presenti nel software center sono certificati per la sicurezza e qualità.
 Ci sono altre distribuzioni che, come Ubuntu sono basate su Debian o addirittura su Ubuntu, ma con una veste grafica che ha un maggior appeal estetico. Ma quanto può durare?
 In caso di problemi, una semplice ricerca su google con i termini
 tutorial o solved o “apt-get” o copiando e incollando il messaggio d'errore, portano ad un veloce soluzione, anche semplicemente quando la soluzione non c'è.
