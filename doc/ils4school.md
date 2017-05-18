@@ -3,8 +3,9 @@
 ### Revisioni
 | AAMMGG | N.Cognome       | Modifica                                         |
 |--------|-----------------|--------------------------------------------------|
-| 160516 | S.Zaglio        | Revisione ortografica
-| 170421 | S.Zaglio        | Bozza
+| 170518 | S.Zaglio        | Mod. a “Perchè software libero e aperto”         |
+| 170516 | S.Zaglio        | Revisione ortografica                            |
+| 170421 | S.Zaglio        | Bozza                                            |
 
 ### Gestione segreteia scolastica
 
