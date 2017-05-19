@@ -3,6 +3,7 @@
 ### Revisioni
 | AAMMGG | N.Cognome       | Modifica                                         |
 |--------|-----------------|--------------------------------------------------|
+| 170519 | S.Zaglio        | Mod. a “Perchè software libero e aperto”         |
 | 170518 | S.Zaglio        | Mod. a “Perchè software libero e aperto”         |
 | 170516 | S.Zaglio        | Revisione ortografica                            |
 | 170421 | S.Zaglio        | Bozza                                            |
@@ -19,7 +20,7 @@ L'evoluzione informatica italiana, porta la scuola a doversi dotare di strumenti
   	* fatturazione
   	
 ### Perché software libero e aperto
-La primaria funzione di una scuola è l'apprendimento. Mentre ad oggi quasi nessun individuo si porta appresso taccuino e penna, sempre più giovani sono dotati di smartphone. L'informatica non è più una conoscenza riservata ai tecnici. Il software a codice aperto e quindi studiabile, non è preconfezionato ma allo stesso tempo non è fortemente dipendente da una specifica linea di condotta personale. Il software proprietario obbliga, oltre al costo di licenza, anche a quello per l'installazione e manutenzione. Vi si aggiunge eventuale costo per personalizzazione oppure all'adeguamento. Può obbligare all'acquisto di funzionalità non richieste. L’installatore diventa rivenditore. Il software libero comporta necessariamente auto formazione. Con ciò l'attività viene equamente ripartita tra tecnico e utente, valorizzandone il lavoro. Nel software proprietario il maggior valore è dato al prodotto  e diviene sempre più questione di brand. Poiché il valore è anche un costo, nel caso del OS ha un ritorno diretto.
+La primaria funzione di una scuola è l'apprendimento. Mentre ad oggi quasi nessun individuo si porta appresso taccuino e penna, sempre più giovani sono dotati di smartphone. L'informatica non è più una conoscenza riservata ai tecnici. Il software a codice aperto e quindi studiabile, non è preconfezionato ma allo stesso tempo non è fortemente dipendente da una specifica linea di condotta personale. Il software proprietario obbliga, oltre al costo di licenza, anche a quello per l'installazione e manutenzione. Spesso inflessibile e monolitico, altre volte esageratamente elastico. Molti hanno creduto di poter gestire la contabilità o la produzione con Excel. L’installatore diventa rivenditore del produttore anziché partner del cliente. Il software libero comporta necessariamente auto formazione. Con ciò l'attività viene equamente ripartita tra tecnico e utente, valorizzandone il lavoro. Nel software proprietario il maggior valore è dato al prodotto  e diviene sempre più questione di brand. Poiché il valore è anche un costo, nel caso del OS ha un ritorno diretto.
 La crescita costante del software libero e la sua adozione da parte dei grandi produttori, anche del settore informatico, dimostra che quando la valorizzazione del prodotto supera la sua reale utilità, non c'è benefico.
 Le comunità di sviluppo rappresentano poi esempi di applicazione di organizzazioni democratiche e dei relativi vantaggi economici.
 Linux si pone, nel suo modo si essere, come un engine for state machine workflow. Non è facile, ma può essere personalizzato a piacere. Non è caso è divenuto cuore e cervello di molti dispositivi casalinghi come le smarttv.
